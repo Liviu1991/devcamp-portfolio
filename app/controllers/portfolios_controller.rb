@@ -25,12 +25,24 @@ class PortfoliosController < ApplicationController
 
   def update
     @portfolio = Portfolio.find(params[:id])
-      respond_to do |format|
+    respond_to do |format|
       if @portfolio.update(portfolio_params)
         format.html { redirect_to portfolios_path, notice: 'Portfolio was successfully updated.' }
       else
         format.html { render :edit }
       end
+    end
+  end
+
+  def show
+    @portfolio = Portfolio.find(params[:id])
+  end
+
+  def destroy
+    @portfolio = Portfolio.find(params[:id])
+    @portfolio.destroy
+    respond_to do |format|
+      format.html { redirect_to portfolios_path, notice: 'Blog was successfully destroyed.' }
     end
   end
 
