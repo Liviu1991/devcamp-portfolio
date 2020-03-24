@@ -16,8 +16,6 @@
 
     <%= login_helper %>
       <%= yield %>
-    <% if session[:source] %>
-      <p>Thanks for visiting me on <%= session[:source] %></p>
-    <% end %>
+    <%= source_helper('portfolios') %>
   </body>
 </html>
