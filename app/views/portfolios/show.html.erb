@@ -3,7 +3,7 @@
 <h2><%= @portfolio.title %></h2>
 <em><%= @portfolio.subtitle %></em>
 <p><%= @portfolio.body %></p>
-<%= link_to "Edit", edit_portfolio_path(@portfolio) %>
+<%= link_to "Edit", edit_portfolio_path(@portfolio) if logged_in?(:site_admin) %>
 
 <h2>Technologies Used</h2>
 <% @portfolio.technologies.each do |t| %>
