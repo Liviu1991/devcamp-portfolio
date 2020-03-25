@@ -4,9 +4,17 @@ class ApplicationController < ActionController::Base
   include CurrentUserConcern
   include DefaultPageContent
 
-  before_action :set_title
+  before_action :set_copyright
 
-  def set_title
-    @page_title = 'Devcamp Portfolio | My Portfolio Website'
+  def set_copyright
+    @copyright = DevcampViewTool::Renderer.copyright 'Jordan Hugens', 'All rights reserved'
+  end
+end
+
+module DevcampViewTool
+  class Renderer
+    def self.copyright name, msg
+      "&copy; #{Time.now.year} | <b>#{name}</b> #{msg}".html_safe
+    end
   end
 end
