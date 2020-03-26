@@ -11,11 +11,9 @@
   </head>
   <body>
     <div class="container">
-      <%= render 'shared/blog_header'%>
-      <%= render 'shared/blog_nav'%>
-      <%= render 'shared/blog_jumbotron'%>
-      <%= render 'shared/blog_cards'%>
-      <main role='main'>
+      <%= render 'blog_header'%>
+      <%= render 'blog_nav'%>
+      <main role='main' class="container">
         <%= yield %>
       </main>
       <%= render 'shared/application_footer' %>
