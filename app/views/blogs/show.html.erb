@@ -1,14 +1,16 @@
-
-
-<p>
-  <strong>Title:</strong>
-  <%= @blog.title %>
-</p>
-
-<p>
-  <strong>Body:</strong>
-  <%= @blog.body %>
-</p>
-
-<%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %> |
-<%= link_to 'Back', blogs_path %>
+<h3 class="pb-4 mb-4 font-italic border-bottom">
+<%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
+</h3>
+<div class="row">
+  <div class="col-md-8 blog-main">
+    <h2>
+      <%= @blog.title %>
+    </h2>
+      <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %> |
+      <%= link_to 'Back', blogs_path %>
+    <p>
+      <%= @blog.body %>
+    </p>
+  </div>
+  <%= render 'aside' %>
+</div>

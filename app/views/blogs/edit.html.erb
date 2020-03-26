@@ -1,6 +1,9 @@
-<h1>Editing Blog</h1>
-
-<%= render 'form', blog: @blog %>
-
-<%= link_to 'Show', @blog %> |
-<%= link_to 'Back', blogs_path %>
+<h3 class="pb-4 mb-4 font-italic border-bottom">
+Editing Blog</h3>
+<div class="row">
+  <div class="col-md-8 blog-main">
+    <%= render 'form', blog: @blog %>
+    <%= link_to 'Back', blogs_path %>
+  </div>
+  <%= render 'aside' %>
+</div>
