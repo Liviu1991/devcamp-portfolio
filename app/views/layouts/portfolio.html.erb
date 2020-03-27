@@ -6,17 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body class="text-center">
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <%= render 'shared/application_nav'%>
-      <main role="main" class="inner cover">
+      <%= render 'header' %>
         <%= yield %>
-      </main>
-      <%= render 'shared/application_footer' %>
-          <%= source_helper('application') %>
-    </div>
+    <%= render 'footer' %>
   </body>
 </html>

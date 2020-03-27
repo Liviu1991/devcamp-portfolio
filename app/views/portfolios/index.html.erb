@@ -1,6 +1,9 @@
-<h2>Portfolio Items</h2>
-
-<%= link_to "Create new Item", new_portfolio_path if logged_in?(:site_admin) %>
-
-<%= render @portfolios %>
-
+<main role="main">
+  <div class="album py-5 bg-light">
+    <div class="container">
+      <div class="row">
+          <%= render @portfolios %>
+      </div>
+    </div>
+  </div>
+</main>
