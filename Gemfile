@@ -56,6 +56,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'bootstrap', '~> 4.4.1'
 gem 'carrierwave'
 gem 'carrierwave-aws', '~> 1.4'
+gem 'cloudinary', '~> 1.13', '>= 1.13.2'
 gem 'devise', '~> 4.7', '>= 4.7.1'
 gem 'dotenv-rails', '~> 2.7', '>= 2.7.5'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
