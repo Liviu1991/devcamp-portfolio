@@ -54,10 +54,14 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Gems
 gem 'bootstrap', '~> 4.4.1'
+gem 'carrierwave'
+gem 'carrierwave-aws', '~> 1.4'
 gem 'devise', '~> 4.7', '>= 4.7.1'
+gem 'dotenv-rails', '~> 2.7', '>= 2.7.5'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 gem 'friendly_id', '~> 5.2.4'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.5'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'
 gem 'kaminari', '~> 1.2'
+gem 'mini_magick', '~> 4.10', '>= 4.10.1'
 gem 'petergate', '~> 2.0', '>= 2.0.1'
