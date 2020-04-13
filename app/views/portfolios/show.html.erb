@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-7">
-      <%= image_tag portfolio_img(@portfolio.main_image, 'main') %>
+    <div class="col-md-7 main-image">
+      <%= image_tag @portfolio.main_image.url unless @portfolio.main_image.url.nil? %>
     </div>
     <div class="col-md-5">
       <h2><%= @portfolio.title %></h2>
