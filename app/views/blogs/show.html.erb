@@ -21,10 +21,13 @@
 
     <% end %>
   <% end %>
-  <div id="comments" data-blog-id="<%= @blog.id %>">
-    <%= render @blog.comments %>
+    <div id="comments" data-blog-id="<%= @blog.id %>">
+      <%= render @blog.comments %>
+    </div>
   </div>
-  </div>
-  <%= render 'aside' %>
 
+  <div class="col-md-4 blog-sidebar">
+    <%= render 'aside' %>
+  </div>
 </div>
+
