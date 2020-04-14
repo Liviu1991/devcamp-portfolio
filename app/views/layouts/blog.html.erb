@@ -11,12 +11,12 @@
   </head>
   <body>
     <div class="container">
-      <%= render 'blog_header'%>
-      <%= render 'blog_nav'%>
+      <%= render 'blogs/blog_header'%>
+      <%= render 'blogs/blog_nav'%>
       <main role='main' class="container">
         <%= yield %>
       </main>
-      <%= render 'footer' %>
+      <%= render 'blogs/footer' %>
       <%= alerts %>
       <%= source_helper('application') %>
     </div>
